@@ -23,7 +23,7 @@ const friend = {
     name: Jordan,
     age: 30,
     location: Vancouver
-    into: function() {
+    intro: function() {
         return `${this.name} lives in ${this.location}, he's ${this.age} and he's my BEST friend!`;
     }
 }
