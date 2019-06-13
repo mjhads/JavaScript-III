@@ -37,10 +37,11 @@ GameObject.prototype.destroy = function () {
 */
 
 const CharacterStats = {
+  GameObject.call(this, CharacterStats);
   healthPoints: 15,
 };
 
-GameObject.call(this, CharacterStats);
+
 
 CharacterStats.prototype.takeDamage = function() {
   return '<object name> took damage.';
@@ -57,13 +58,14 @@ CharacterStats.prototype.takeDamage = function() {
 */
  
 const Humaniod = {
+  CharacterStats.call(this, Humanoid);
+  CharacterStats.call(this, takeDamage);
   team: 'Royal Pains',
   weapons: ['pretend-wand', 'not-so-invisible cloak', 'lie potion'],
   language: 'Pig Latin',
 }
 
-CharacterStats.call(this, Humanoid);
-CharacterStats.call(this, takeDamage);
+
 
 Humaniod.prototype.greet = function() {
   return `<object name> offers a greeting in <object language>.`;
